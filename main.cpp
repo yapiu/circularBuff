@@ -4,20 +4,6 @@
 
 using namespace std;
 
-void subtraction_thread(void){
-	for (int  i = 0; i < 65; i++) {
-		this_thread::sleep_for(chrono::duration<int, std::ratio<1,100>>(9));
-		cout << "-";
-	}
-}
-
-void addition_thread(int number){
-	for (int  i = 0; i < number; i++) {
-		this_thread::sleep_for(chrono::duration<int, std::ratio<1,100>>(100));
-		cout << "+";
-	}
-}
-
 int main()
 {
 	circularBuff test(5);
