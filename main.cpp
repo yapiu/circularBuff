@@ -20,17 +20,6 @@ void addition_thread(int number){
 
 int main()
 {
-	//seed();
-	// thread th1(subtraction_thread);
-	// thread th2(addition_thread, 8);
-
-	// cout << "start thread" << endl;
-
-	// th1.join();
-	// th2.join();
-
-	// cout << "thread complete" << endl;
-
 	circularBuff test(5);
 
 	thread th1(&circularBuff::write, &test, 10);
@@ -39,8 +28,6 @@ int main()
 	th1.join();
 	th2.join();
 
-	// test.write(6);
-	// test.read();
 	test.print();
 	cout << endl;
 	test.printCopyAr();
